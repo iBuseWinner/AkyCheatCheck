@@ -1,0 +1,21 @@
+name: AkyCheatCheck
+version: '${version}'
+main: ru.akydevv.akycheatcheck.AkyCheatCheckPlugin
+api-version: '1.20'
+author: akydevv
+softdepend: [PlaceholderAPI]
+commands:
+  akycheck:
+    description: Управление проверками на читы
+    usage: /akycheck <start|release|as|ban|soft|deny|addtime|setcabin|confess|info|stats|reload|list>
+    aliases: [check, cc]
+permissions:
+  akycheatcheck.moderator:
+    description: Доступ к управлению проверками
+    default: op
+  akycheatcheck.reload:
+    description: Перезагрузка конфигурации и настройка кабинок
+    default: op
+  akycheatcheck.bypass:
+    description: Иммунитет к AFK-вызову на проверку
+    default: op
