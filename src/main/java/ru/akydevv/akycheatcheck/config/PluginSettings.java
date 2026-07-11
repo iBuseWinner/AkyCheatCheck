@@ -39,6 +39,7 @@ public final class PluginSettings {
     private final boolean telegramEnabled;
     private final String telegramBotToken;
     private final String telegramChatId;
+    private final String telegramApiLink;
     private final boolean webDashboardEnabled;
     private final String webDashboardHost;
     private final int webDashboardPort;
@@ -77,6 +78,7 @@ public final class PluginSettings {
                           boolean telegramEnabled,
                           String telegramBotToken,
                           String telegramChatId,
+                          String telegramApiLink,
                           boolean webDashboardEnabled,
                           String webDashboardHost,
                           int webDashboardPort,
@@ -114,6 +116,7 @@ public final class PluginSettings {
         this.telegramEnabled = telegramEnabled;
         this.telegramBotToken = Objects.requireNonNull(telegramBotToken, "telegramBotToken");
         this.telegramChatId = Objects.requireNonNull(telegramChatId, "telegramChatId");
+        this.telegramApiLink = Objects.requireNonNull(telegramApiLink, "telegramApiLink");
         this.webDashboardEnabled = webDashboardEnabled;
         this.webDashboardHost = Objects.requireNonNull(webDashboardHost, "webDashboardHost");
         this.webDashboardPort = Math.max(1, Math.min(65535, webDashboardPort));
@@ -153,6 +156,7 @@ public final class PluginSettings {
     public boolean isTelegramEnabled() { return telegramEnabled; }
     public String getTelegramBotToken() { return telegramBotToken; }
     public String getTelegramChatId() { return telegramChatId; }
+    public String getApiLink() { return telegramApiLink; }
     public boolean isWebDashboardEnabled() { return webDashboardEnabled; }
     public String getWebDashboardHost() { return webDashboardHost; }
     public int getWebDashboardPort() { return webDashboardPort; }
