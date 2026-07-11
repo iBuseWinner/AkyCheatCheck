@@ -78,6 +78,7 @@ public final class YamlSettingsProvider implements SettingsProvider {
                 plugin.getConfig().getBoolean("audit.telegram.enabled", false),
                 plugin.getConfig().getString("audit.telegram.bot-token", ""),
                 plugin.getConfig().getString("audit.telegram.chat-id", ""),
+                plugin.getConfig().getString("audit.telegram.api-link", "https://api.telegram.org"),
                 plugin.getConfig().getBoolean("web-dashboard.enabled", true),
                 plugin.getConfig().getString("web-dashboard.host", "0.0.0.0"),
                 plugin.getConfig().getInt("web-dashboard.port", 8094),
