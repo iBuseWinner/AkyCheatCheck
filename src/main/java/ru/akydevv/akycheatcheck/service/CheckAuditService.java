@@ -96,11 +96,12 @@ public final class CheckAuditService {
     private void sendTelegram(String line) {
         String token = settingsProvider.getSettings().getTelegramBotToken();
         String chatId = settingsProvider.getSettings().getTelegramChatId();
+        String apiLink = settingsProvider.getSettings().getApiLink();
         if (!settingsProvider.getSettings().isTelegramEnabled() || token.isBlank() || chatId.isBlank()) {
             return;
         }
         String body = "chat_id=" + encode(chatId) + "&text=" + encode(line);
-        HttpRequest request = HttpRequest.newBuilder(URI.create("https://api.telegram.org/bot" + token + "/sendMessage"))
+        HttpRequest request = HttpRequest.newBuilder(URI.create(apiLink + "/bot" + token + "/sendMessage"))
                 .header("Content-Type", "application/x-www-form-urlencoded")
                 .POST(HttpRequest.BodyPublishers.ofString(body, StandardCharsets.UTF_8))
                 .build();
