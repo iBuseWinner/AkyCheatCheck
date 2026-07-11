@@ -68,6 +68,7 @@ audit:
     enabled: false
     bot-token: ''
     chat-id: ''
+    api-link: 'https://api.telegram.org'
 
 web-dashboard:
   enabled: true
